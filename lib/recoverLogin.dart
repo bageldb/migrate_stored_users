@@ -1,4 +1,4 @@
-import 'package:bagel_auth_app/bageldb-0.1.23/src/bage_db_shared_prefs.dart';
+import 'package:bagel_db/bage_db_shared_prefs.dart';
 import 'prev_localstore.dart';
 
 class MigrateStoredUser {
@@ -16,7 +16,7 @@ class MigrateStoredUser {
     {"collection": "access", "doc": "nonce"}
   ];
 
-  Future<void> init() async {
+  Future<void> import() async {
     await sp.init();
     for (Map item in data) {
       dynamic doc =
